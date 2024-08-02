@@ -5,7 +5,6 @@ import Cards from '../../components/Cards/cards.jsx';
 import './home.css'
 
 const Home = () => {
-
     const [movies, setMovies] = useState([])
     const [aveRuntime, setAveRuntime] = useState('')
     const [aveBudget, setAveBudget] = useState('')
@@ -23,15 +22,15 @@ const Home = () => {
                 }
             })
             setMovies(sortedMovies)
-            handleAves()
+            handleAves(sortedMovies) // Atualiza os valores médios com a lista de filmes ordenada
         } catch (error) {
             console.error(error)
         }
     }
 
-    const handleAves = () => {
-        const aveB = movies.reduce((acc, item) => acc + item.budgetInMillions, 0) / movies.length
-        const aveR = movies.reduce((acc, item) => acc + item.runtimeInMinutes, 0) / movies.length
+    const handleAves = (moviesList) => {
+        const aveB = moviesList.reduce((acc, item) => acc + item.budgetInMillions, 0) / moviesList.length
+        const aveR = moviesList.reduce((acc, item) => acc + item.runtimeInMinutes, 0) / moviesList.length
         setAveBudget(aveB)
         setAveRuntime(aveR)
     }
@@ -53,12 +52,13 @@ const Home = () => {
                 return movie.name.toLowerCase().includes(searchTerm)
             })
             setMovies(filteredMovies)
+            handleAves(filteredMovies) // Atualiza os valores médios com a lista de filmes filtrada
         } catch (error) {
             console.error(error)
         }
     }
 
-    const debouncedFilterMovies = debounce(filterMovies, 800)
+    const debouncedFilterMovies = debounce(filterMovies, 1000)
 
     const handleInputChange = (e) => {
         const searchTerm = e.target.value.toLowerCase()
@@ -72,7 +72,6 @@ const Home = () => {
 
     useEffect(() => {
         fetchMovies()
-
     }, [selectedOption]);
 
     return (
@@ -87,7 +86,6 @@ const Home = () => {
                     </div>
                     <div className='filters-div'>
                         <input
-                            
                             placeholder='Filter movies by name'
                             onChange={handleInputChange}
                             value={filterName}
