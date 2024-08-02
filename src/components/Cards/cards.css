@@ -1,0 +1,94 @@
+.all-cards-style {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.card-style {
+    width: 240px;
+    height: auto;
+    min-height: 328px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px 0px #0C19321F;
+}
+
+.card-style:hover {
+    box-shadow: 0px 16px 16px 0px #0C19321F;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+}
+
+.movie-title-runtime {
+    width: 100%;
+    max-width: 208px;
+    height: auto;
+    min-height: 46px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 8px;
+    color: #0C1932;
+}
+
+.movie-title-runtime span {
+    color: #0C193299;
+}
+
+.card-text-style {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    min-height: 168px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px 16px 20px 16px;
+    box-sizing: border-box;
+}
+
+.awards-style {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;    
+    gap: 8px;
+}
+
+.awards-style span {
+    color: #0C1932CC;    
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.budget-revenue-style {
+    color: #0C1932CC;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.currency-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.currency-style {
+    color: #0C193299;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+}

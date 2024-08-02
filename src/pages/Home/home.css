@@ -1,0 +1,108 @@
+.main-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-cards-div {
+    width: auto;
+    max-width: 1008px;
+    height: auto;
+    max-height: 812px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 179px;
+}
+
+.title-div {
+    width: 1008px;
+    height: auto;
+    min-height: 76px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.title-avg-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #0C1932
+}
+
+.title-avg-div h1 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 32px;
+}
+
+.filters-div {
+    width: auto;
+    min-width: 408px;
+    height: auto;
+    min-height: 40px;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+
+}
+
+.filters-div input,
+.filters-div select {
+    width: 200px;
+    height: 40px;
+    border: solid 1px #C5D2E0;
+    border-radius: 2px;
+    box-sizing: border-box;
+    padding: 1px 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.filters-div input {
+    color: #0C193299;
+    background-color: #ffffff;
+    border: 1px solid #C5D2E0;
+}
+
+.filters-div input:hover {
+    border: 1px solid #ABBBCC;
+}
+
+.filters-div input:focus {
+    border: 2px solid #4C00FF;  
+}
+
+.filters-div select {
+    color: #0C1932;
+    background-color: #F5F7FA;
+}
+
+.filters-div select:hover {
+    background: #EBF0F5;
+    border: 1px solid #ABBBCC;
+}
+
+.filters-div select:focus {
+    background: #EBF0F5;
+    border: 2px solid #4C00FF;
+}
+
+.filters-div select:active {
+    background: #ABBBCC;
+    border: 1px solid #ABBBCC
+}
+
+hr {
+    width: 100%;
+    border: 1px solid #D8E1EB;   
+    margin: 40px 0;
+}
